@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF9F7;
+  --foreground: #1A1A18;
+  --primary: #C2522D;
+  --primary-hover: #A8421F;
+  --ink-muted: #6B6B63;
+  --surface-1: #F2F0EC;
+  --surface-2: #E8E5E0;
+  --border-custom: #D8D4CC;
+  --accent-warm: #D4A574;
+  --code-bg: #F0EDE8;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-ink: var(--foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-canvas: var(--background);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-border-custom: var(--border-custom);
+  --color-accent-warm: var(--accent-warm);
+  --color-code-bg: var(--code-bg);
+  
+  --font-display: var(--font-jakarta), -apple-system, sans-serif;
+  --font-body: var(--font-jakarta), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom focus outline */
+*:focus-visible {
+  outline: 2px solid var(--primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-custom);
+}
